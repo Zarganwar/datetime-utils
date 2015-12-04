@@ -27,12 +27,18 @@ class DateTimeUtilsTest
 		// holiday
 		$datetime = DateTimeUtils::getCorrectDateTime("9:00", "20:00", true, true, DateTimeUtils::COUNTRY_CZ, new DateTime("2014-05-01 11:20:20"));
 		$this->assertTrue($datetime == "2014-05-02 09:00:00");
+		
+		$datetime = DateTimeUtils::getCorrectDateTime("9:00", "20:00", true, false, DateTimeUtils::COUNTRY_CZ, new DateTime("2014-05-01 11:20:20"));
+		$this->assertTrue($datetime == "2014-05-01 11:20:20");
 
 		// easter
 		$datetime = DateTimeUtils::getCorrectDateTime("9:00", "20:00", true, true, DateTimeUtils::COUNTRY_CZ, new DateTime("2015-04-03 11:20:20"));
 		$this->assertTrue($datetime == "2015-04-07 09:00:00");
 
 		// weekend
+		$datetime = DateTimeUtils::getCorrectDateTime("9:00", "20:00", true, true, DateTimeUtils::COUNTRY_CZ, new DateTime("2015-12-05 11:20:20"));
+		$this->assertTrue($datetime == "2015-12-05 11:20:20");
+		
 		$datetime = DateTimeUtils::getCorrectDateTime("9:00", "20:00", true, true, DateTimeUtils::COUNTRY_CZ, new DateTime("2015-12-05 11:20:20"));
 		$this->assertTrue($datetime == "2015-12-07 09:00:00");
 
