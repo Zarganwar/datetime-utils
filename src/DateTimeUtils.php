@@ -13,6 +13,7 @@ class DateTimeUtils
 	 * @param $country
 	 * @return array
 	 * @throw InvalidArgumentException
+	 * @todo Add better holiday loading
 	 */
 	public static function getHolidayDays($country)
 	{
