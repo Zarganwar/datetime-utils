@@ -1,7 +1,12 @@
 <?php
+
 /**
  * @author Martin Jirasek <jertin@seznam.cz>
  */
+
+require __DIR__ . '/../src/Common.php';
+require __DIR__ . '/../src/Skip.php';
+
 if (@!include __DIR__ . '/../vendor/autoload.php') {
 	echo 'Install Nette Tester using `composer update --dev`';
 	exit(1);
