@@ -17,8 +17,7 @@
 	"require": {		
 	},
 	"require-dev": {
-		"nette/tester": "~1.3@rc",
-		"phpunit/phpunit": "5.1.*"
+		"nette/tester": "~1.3@rc"
 	},
 	"autoload": {
 		"psr-0": {
