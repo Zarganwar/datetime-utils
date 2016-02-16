@@ -24,7 +24,8 @@
 			"Zarganwar\\datetime-utils\\": "src/"
 		},
 		"classmap": [
-			"src/DateTimeUtils.php"
+			"src/Common.php",
+			"src/Skip.php"
 		]
 	},
 	"extra": {
